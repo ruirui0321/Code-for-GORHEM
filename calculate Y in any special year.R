@@ -1322,7 +1322,7 @@ for (year_ in 1980:1990) {
     filtered_data <- results_list %>%
       filter(country == country_, age_group == age_group_, sex_name == sex_name_)
     simulations <- data.frame(simulation = 1:n_simulations, Y_SCC = NA)
-    #c_d <- fread("/WORK/genggn_work/hechangpei/STILT/TUV/age_sum/age_sum_mtkl/2025/c_d_scc.csv")
+    #c_d <- fread("C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/monte carlo/c_d_scc.csv")
     for (sim in 1:n_simulations) {
       c_sim <- c_mean
       d_sim <- d_mean
