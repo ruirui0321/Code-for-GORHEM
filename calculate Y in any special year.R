@@ -214,7 +214,6 @@ for (year_ in 1980) {
     sex_name_ <- combination$sex_name
     print(paste("Processing: Country =", country_, ", Year =", year_, ", Age Name =", age_name_, ", Sex Name =", sex_name_))
     group <- total[total$country == country_ & total$year == year_ & total$age_name <= age_name_ & total$sex_name == sex_name_, ]
-    # 筛选唯一值
     group_ <- group %>%
       select(country, year,year_history, age_name, sex_name, dose_a_weighted_total) %>%
       distinct()
@@ -398,7 +397,6 @@ for (year_ in 2005) {
     sex_name_ <- combination$sex_name
     print(paste("Processing: Country =", country_, ", Year =", year_, ", Age Name =", age_name_, ", Sex Name =", sex_name_))
     group <- total_no[total_no$country == country_ & total_no$year == year_ & total_no$age_name <= age_name_ & total_no$sex_name == sex_name_, ]
-    # 筛选唯一值
     group_ <- group %>%
       select(country, year,year_history, age_name, sex_name, dose_a_weighted_total) %>%
       distinct()
@@ -608,7 +606,6 @@ for (year_ in 2048) {
     sex_name_ <- combination$sex_name
     print(paste("Processing: Country =", country_, ", Year =", year_, ", Age Name =", age_name_, ", Sex Name =", sex_name_))
     group <- total_no[total_no$country == country_ & total_no$year == year_ & total_no$age_name <= age_name_ & total_no$sex_name == sex_name_, ]
-    # 筛选唯一值
     group_ <- group %>%
       select(country, year,year_history, age_name, sex_name, phi_a_weighted_total) %>%
       distinct()
@@ -1348,7 +1345,6 @@ for (year_ in 1980:1990) {
     sex_name_ <- combination$sex_name
     #print(paste("Processing: Country =", country_, ", Year =", year_, ", Age Name =", age_name_, ", Sex Name =", sex_name_))
     group <- total[total$country == country_ & total$year == year_ & total$age_name <= age_name_ & total$sex_name == sex_name_, ]
-    # 筛选唯一值
     group_ <- group %>%
       select(country, year,year_history, age_name, sex_name, phi_a_weighted_total) %>%
       distinct()
@@ -2100,7 +2096,6 @@ library(doParallel)
 cl <- makeCluster(12)
 registerDoParallel(cl)
 years <- 1980:2100
-# 文件路径和保存路径模板
 # input_path_template <- "C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/incidence_results/total_inc_control_"
 #output_path_template <- "C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/incidence_results/year_sum_"
 # input_path_template <- "C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/death_results/total_dea_control_"
