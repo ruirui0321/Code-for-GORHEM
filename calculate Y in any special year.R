@@ -2139,7 +2139,7 @@ for (year in years) {
 fwrite(year_sum_death, file = output_file)
 
 
-year_sum <- fread("/WORK/genggn_work/hechangpei/STILT/TUV/age_sum/age_sum_mtkl/2025/incidence_results/year_sum_incidence.csv")
+year_sum <- fread("C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/incidence_results/year_sum_incidence.csv")
 library(dplyr)
 result <- year_sum %>%
   group_by(simulation) %>%
