@@ -163,7 +163,7 @@ fwrite(m_total,file="C:/Users/Administrator/Desktop/health benefits and economic
 library(data.table)
 library(dplyr)
 library(triangle)
-m_total <- fread("/WORK/genggn_work/hechangpei/STILT/TUV/age_sum/age_sum_mtkl/2025/cost_mtkl/life_ex/life_expectancy.csv")
+m_total <- fread("C:/Users/Administrator/Desktop/health benefits and economic welfare of MP/life expectancy/life_expectancy.csv")
 m_total <- m_total[,c("location_name","sex_name","age_name","year","val","lower","upper")]
 library(triangle)
 m_total$age_name <- gsub("^80-84$", "80-84 years", m_total$age_name)
